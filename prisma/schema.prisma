@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id   String @id @default(auto()) @map("_id") @db.ObjectId
+  email     String  @unique
+  username  String @unique
+  image_url String?
+  password  String
+  template  Template[]
+  media     String[]
+}
+
+model Template {
+  template_id String   @id @default(auto()) @map("_id") @db.ObjectId
+  owner       User     @relation(fields: [owner_id], references: [user_id])
+  owner_id    String   @db.ObjectId
+  name        String
+  background  String
+  photo       String
+  title       String 
+  items       Element[]
+  linkStyle   LinkStyle
+  headerStyle HeaderStyle
+  titleStyle  TitleStyle
+}
+
+type TitleStyle {
+  fontSize   String
+  fontFamily String
+  fontColor  String
+  fontWeight String
+}
+
+type Element {
+  name    String
+  url     String?
+  enabled Boolean
+  type    String
+  image   String?
+}
+
+type LinkStyle {
+  background     String
+  borderColor    String
+  borderWidth    String
+  borderRadius   String
+  hoverAnimation String
+  fontSize  String
+  fontColor String
+  fontWeight String
+}
+
+type HeaderStyle {
+  fontSize  String
+  fontColor String
+  fontWeight String
+}

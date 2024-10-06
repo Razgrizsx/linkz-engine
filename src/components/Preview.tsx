@@ -15,7 +15,6 @@ export const Preview = ({ templateId }: Props) => {
     (async () => {
       const response = await getUserTemplate(templateId);
       setResponse(response);
-      console.log(response);
     })();
   }, []);
 
