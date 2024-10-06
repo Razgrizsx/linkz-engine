@@ -1,7 +1,7 @@
 import { Preview } from "@/components/Preview";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
-export default function Template({ params }: Params) {
+export default function Template({ params }: any) {
   return (
     <div className='h-svh flex justify-center'>
       <Preview templateId={params.templateId} />

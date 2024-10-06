@@ -23,7 +23,7 @@ export const Preview = ({ templateId }: Props) => {
     <div
       style={{ backgroundColor: response?.background }}
       className={`w-[20%] h-full rounded-[3rem] shadow-lg shadow-gray-400 px-2 py-10`}
-      onClick={() => console.log(response)}
+      onClick={() => console.log(templateId)}
     >
       <div className='w-[150px] h-[150px] rounded-full m-auto mt-4'>
         <img
