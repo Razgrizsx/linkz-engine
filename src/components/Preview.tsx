@@ -22,7 +22,7 @@ export const Preview = ({ templateId }: Props) => {
   return (
     <div
       style={{ backgroundColor: response?.background }}
-      className={`w-[40%] h-full rounded-[3rem] shadow-lg shadow-gray-400 px-2 py-10`}
+      className={`w-[20%] h-full rounded-[3rem] shadow-lg shadow-gray-400 px-2 py-10`}
       onClick={() => console.log(response)}
     >
       <div className='w-[150px] h-[150px] rounded-full m-auto mt-4'>
