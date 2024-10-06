@@ -1,5 +1,3 @@
-import Cookies from "js-cookie";
-
 export const getUserTemplate = async (templateId: string) => {
   console.log("id", templateId);
   const url = `http://localhost:8080/template/${templateId}`;
