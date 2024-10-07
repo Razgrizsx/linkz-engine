@@ -24,20 +24,20 @@ export const Preview = ({ templateId }: Props) => {
       className={`w-[20%] h-full rounded-[3rem] shadow-lg shadow-gray-400 px-2 py-10`}
       onClick={() => console.log(templateId)}
     >
-      <div className='w-[150px] h-[150px] rounded-full m-auto mt-4'>
+      <div className="w-[150px] h-[150px] rounded-full m-auto mt-4">
         <img
           src={response?.photo}
-          alt='photo'
-          className='w-full h-full object-cover rounded-full'
+          alt="photo"
+          className="w-full h-full object-cover rounded-full"
         />
       </div>
       <h2
         key={response?.owner_id}
         style={{
           ...response?.titleStyle,
-          color: response?.titleStyle.fontColor
+          color: response?.titleStyle.fontColor,
         }}
-        className='block h-fit w-full my-0.5 text-center'
+        className="block h-fit w-full my-0.5 text-center"
       >
         {response?.title}
       </h2>
@@ -47,7 +47,7 @@ export const Preview = ({ templateId }: Props) => {
             href={item.url || ""}
             key={item.name}
             style={response.linkStyle}
-            className='h-auto min-h-10 w-full text-center my-4 rounded-md flex items-center justify-center border-none overflow-hidden'
+            className="h-auto min-h-10 w-full text-center my-4 rounded-md flex items-center justify-center border-none overflow-hidden"
           >
             {item && item.image ? (
               <LinkImagePreview
@@ -64,9 +64,9 @@ export const Preview = ({ templateId }: Props) => {
             key={item.name}
             style={{
               ...response.headerStyle,
-              color: response.headerStyle.fontColor
+              color: response.headerStyle.fontColor,
             }}
-            className='block h-fit w-full my-0.5 text-center'
+            className="block h-fit w-full my-0.5 text-center"
           >
             {item.name}
           </h2>
