@@ -1,4 +1,4 @@
-Url of the engine: https://linkz-engine.vercel.app/{Template Id}
+Url of the engine: https://linkz-engine.vercel.app/ + {Template Id}
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
