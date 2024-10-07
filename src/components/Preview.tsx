@@ -38,6 +38,7 @@ export const Preview = ({ templateId }: Props) => {
           style={{
             ...response?.titleStyle,
             color: response?.titleStyle.fontColor,
+            fontFamily: "",
           }}
           className="block h-fit w-full my-0.5 text-center"
         >
